@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -8,21 +8,33 @@ using Web.Models;
 
 namespace Web.Controllers
 {
-    public class HomeController : Controller
+    public class MyController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Content()
+        {
+            return Content("Content page");
+        }
+
+         public IActionResult Html()
+        {
+            return Content("<html><body>Html page</body></html>","text/html");
+        }
+
+        public IActionResult Json()
+        {
+            return Json(new
+            {
+                name = "This is Yashwanth Reddy",
+                age = "24"
+            });
+
+        }
+        public IActionResult joke()
         {
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-        public IActionResult Joke1()
-        {
-            return Content("hello !!!");
-        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
