@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Even or odd";
+}
+<body>
+    Input value = <input type="text" id="val" name =" number" />
+    <input type="button" name="Submit" value="Click" onclick="javascript:calc()" />
+    Value = <input type="text" id="solution" name=" answer" />
+
+</body>
+<script language="javascript">
+    function calc() {
+        var val = parseInt(document.getElementById("val").value);
+        var sol = document.getElementById("solution");
+        if (val == 0) {
+            sol.value = "neither even nor odd";
+        }
+        else if  (val % 2 == 0){
+            sol.value = "even";
+        }
+        else {
+            sol.value = "odd";
+        }
+    }
+
+</script>

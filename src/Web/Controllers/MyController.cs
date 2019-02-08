@@ -33,7 +33,10 @@ namespace Web.Controllers
         {
             return View();
         }
-
+        public IActionResult Index1()
+        {
+            return View("/Views/My/index1.cshtml");
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
