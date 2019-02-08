@@ -29,7 +29,7 @@ namespace Web.Controllers
             });
 
         }
-        public IActionResult joke()
+        public IActionResult Joke()
         {
             return View();
         }
